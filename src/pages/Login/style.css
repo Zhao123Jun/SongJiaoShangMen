@@ -1,0 +1,148 @@
+/* 页面整体容器 */
+.page-container {
+  height: 100vh;
+  width: 100vw;  /* 明确宽度 */
+  display: flex;
+  background-color: #ffffff; /* 改为纯白色 */
+  justify-content: center;   /* 居中对齐 */
+  align-items: center;
+  padding-right: 0;
+  position: relative;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* 左上角标题 */
+.header-title {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+/* 登录框与背景图的容器，水平排列 */
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  height: 90vh;  /* 和图片高度一致 */
+  width: 100%;   /* 占满容器宽度 */
+  max-width: 90vw;
+  gap: 60px; /* ⬅️ 增加左右间距 */
+}
+
+/* 登录框左边背景图 */
+.login-image {
+  width: 1000px;
+  height: 90vh;
+  background-image: url('../../assets/image/background.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-left: 50px; /* ✅ 控制登录框和图片的间距 */
+  /* ❌ 不再设置 margin-right */
+}
+
+/* 登录框样式 */
+.login-container {
+  width: 300px;
+  margin-left: 120px; /* ✅ 控制登录框和图片的间距 */
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* 标题字体加粗 */
+.login-container h2 {
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* 表单输入框组，带图标 */
+.input-group {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+/* 输入框左侧图标 */
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #888;
+  pointer-events: none; /* 图标不可点 */
+}
+
+/* 输入框，左边预留图标宽度 */
+.input-group input {
+  width: 100%;
+  padding: 10px 8px 10px 36px; /* 左边多留出图标宽度 */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* 登录按钮，蓝色长条形 */
+.login-form button {
+  width: 100%;
+  background-color: #3498db;
+  color: white;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 12px;
+}
+
+.login-form button:hover {
+  background-color: #2980b9;
+}
+
+/* 记住账号 和 忘记密码 容器 */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* 记住账号复选框和文本 */
+.login-options label {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  color: #000;
+  cursor: pointer;
+}
+
+.login-options input[type="checkbox"] {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* 忘记密码链接样式 */
+.forgot-password {
+  margin-top: 10px;
+  color: #3498db;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: underline;
+}
+
+.forgot-password:hover {
+  color: #217dbb;
+}
